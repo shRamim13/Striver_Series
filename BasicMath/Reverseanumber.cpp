@@ -21,6 +21,5 @@ int main()
         int n;
         cin >> n;
         cout << Reverse(n) << endl;
-        /* code */
     }
 }
