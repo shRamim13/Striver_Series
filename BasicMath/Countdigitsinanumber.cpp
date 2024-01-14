@@ -11,6 +11,7 @@ int countingDegit(int n)
     
     return cnt;
 }
+
 int main()
 {
    while (1)
@@ -18,7 +19,7 @@ int main()
      int n;
     cin >> n;
     cout << countingDegit(n)<<endl;
-    cout<<int(log10(n)+1)<<endl;
+   // cout<<int(log10(n)+1)<<endl;
     /* code */
    }
    
