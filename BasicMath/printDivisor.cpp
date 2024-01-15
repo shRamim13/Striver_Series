@@ -2,17 +2,27 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin >> n;
-    vector<int> div;
-    for (int i = 1; i * i <= n; i++)
+    while (1)
     {
-        if (n & i == 0)
+        int n;
+        cin >> n;
+        vector<int> div;
+        for (int i = 1; i * i <= n; i++)
         {
-            div.push_back(i);
-            if (n % i != i)
-                div.push_back(n / i);
+            if (n & i == 0)
+            {
+                div.push_back(i);
+                if (n % i != i)
+                    div.push_back(n / i);
+            }
         }
+        sort(div.begin(), div.end());
+
+        for (auto x : div)
+        {
+            cout << x << " ";
+        }
+        cout << endl;
+        /* code */
     }
-    sort(div.begin())
 }
