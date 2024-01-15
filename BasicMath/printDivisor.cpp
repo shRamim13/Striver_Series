@@ -10,7 +10,7 @@ int main()
 
         for (int i = 1; i * i <= n; i++)
         {
-            if (n & i == 0)
+            if (n % i == 0)
             {
                 div.push_back(i);
                 if (n / i != i)
@@ -23,6 +23,8 @@ int main()
         {
             cout << x << " ";
         }
+        cout << endl;
+        cout << "Total no of Divisor --> " << div.size();
         cout << endl;
     }
 }
