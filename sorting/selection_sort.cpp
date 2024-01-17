@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
 void selection_sort(int arr[], int n)
 {
     // selection sort
-    for (int i = 0; i < n - 2; i++)
+    for (int i = 0; i < n - 1; i++)
     {
         int min_indx = i;
-        for (int j = i = 0; j < n - 1; j++)
+        for (int j = i; j < n; j++)
         {
             if (arr[j] < arr[min_indx])
                 min_indx = j;
