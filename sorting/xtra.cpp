@@ -11,15 +11,13 @@ void merge(vector<int> &arr, int low, int mid, int high)
     {
         if (arr[left] <= arr[right])
         {
-            temp.push_back(arr[left++]);
-            cnt++;
-            cout << cnt << endl;
+            temp.push_back(arr[left]);
+            left++;
         }
         else
         {
-            cnt++;
-            cout << cnt << endl;
-            temp.push_back(arr[right++]);
+            temp.push_back(arr[right]);
+            right++;
         }
     }
     while (left <= mid)
@@ -40,7 +38,7 @@ void mergeSort(vector<int> &arr, int low, int high)
 {
     if (low >= high)
         return;
-    int mid = (low + high / 2);
+    int mid = (low + high) / 2;
     mergeSort(arr, low, mid);
     mergeSort(arr, mid + 1, high);
     merge(arr, low, mid, high);
